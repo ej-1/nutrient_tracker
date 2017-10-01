@@ -5,7 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'groupdate'
 gem 'pry'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem 'bootstrap-datepicker-rails'
 gem "roo", "~> 2.7.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
