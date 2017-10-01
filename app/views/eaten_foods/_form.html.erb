@@ -13,19 +13,17 @@
 
   <div class="field">
     <% @foodtypes = Foodtype.all %>
-    <%= select_tag "eaten_food_name", options_from_collection_for_select(@foodtypes, "id", "name") %>
+    <%= select_tag "name", options_from_collection_for_select(@foodtypes, "name", "name") %>
     <!--<%= f.label :name %>-->
     <!--<%= f.text_field :name %>-->
   </div>
 
   <div class="field">
     <%= f.label :amount %>
-    <%= f.number_field :amount %>
+    <%= f.number_field :amount, value: 0 %>
   </div>
-
   <div class="field">
-    <%= f.label :eaten_at %>
-    <%= f.number_field :eaten_at %>
+    <input type="text" data-provide='datepicker' value="<%= eaten_food.eaten_at %>" name="eaten_food[eaten_at]" id="eaten_food_eaten_at">
   </div>
 
   <div class="actions">
