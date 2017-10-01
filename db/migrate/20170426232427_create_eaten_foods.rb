@@ -3,7 +3,7 @@ class CreateEatenFoods < ActiveRecord::Migration[5.0]
     create_table :eaten_foods do |t|
       t.string :name
       t.integer :amount
-      t.integer :eaten_at, default: DateTime.now
+      t.string :eaten_at, default: DateTime.now
 
       t.timestamps
     end
