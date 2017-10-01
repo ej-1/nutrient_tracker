@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+1. open rails console
+2. run Foodtype.save_foodtypes_to_database
