@@ -1,25 +1,19 @@
 var AllEatenFoods = React.createClass({
-    getInitialState() {
-        return { items: [] }
-        console.log(componentDidMount());
-    },
 
-    componentDidMount() {
-        $.getJSON('/api/v1/eaten_foods.json', (response) => { this.setState({ items: response }) });
+    handleSubmit(eaten_food) {
+        console.log(eaten_food);
     },
 
     render() {
-
-        var items_body = this.state.items.map((item) => {
+        var eaten_foods_body = this.props.eaten_foods.map((eaten_food) => {
             return (
                 <tr>
-                  <td>{item.name}</td>
-                  <td>{item.amount}</td>
-                  <td>{item.eaten_at}</td>
+                  <td>{eaten_food.name}</td>
+                  <td>{eaten_food.amount}</td>
+                  <td>{eaten_food.eaten_at}</td>
                 </tr>
             )
         });
-
 
         return(
           <table className="table table-striped">
@@ -31,12 +25,11 @@ var AllEatenFoods = React.createClass({
               </tr>
             </thead>
             <tbody>
-              {items_body}
+              {eaten_foods_body}
             </tbody>
           </table>
         )
     }
-
 });
 
 

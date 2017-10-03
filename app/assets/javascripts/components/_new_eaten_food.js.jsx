@@ -1,18 +1,16 @@
-
-
 var NewEatenFood = React.createClass({
+
     handleClick() {
         var name    	= this.refs.name.value;
         var amount 		= this.refs.amount.value;
-	    	var eaten_at 	= this.refs.eaten_at.value;
-	    	alert('hello');
-	   		console.log('The name value is ' + name + 'the amount value is ' + amount + 'eaten at' + eaten_at + '.');
+        var eaten_at 	= this.refs.eaten_at.value;
+        console.log('The name value is ' + name + 'the amount value is ' + amount + 'eaten at' + eaten_at + '.');
         $.ajax({
             url: '/api/v1/eaten_foods',
             type: 'POST',
             data: { eaten_food: { name: name, amount: amount, eaten_at: eaten_at } },
-            success: (response) => {
-                console.log('it worked!', response);
+            success: (eaten_food) => {
+                this.props.handleSubmit(eaten_food);
             }
         });
     },
