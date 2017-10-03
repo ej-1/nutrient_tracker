@@ -17,12 +17,12 @@ var NewEatenFood = React.createClass({
 
     render() {
         return (
-                <div>
-		                <input ref='name' placeholder='Enter the food'/>
-		                <input ref='amount' placeholder='How many grams did you eat?'/>
-		                <input ref='eaten_at' placeholder='When did you eat?'/>
-                    <button onClick={this.handleClick}>Submit</button>
-                </div>
+          <div>
+            <input ref='name' placeholder='Enter the food'/>
+            <input ref='amount' placeholder='How many grams did you eat?'/>
+            <input ref='eaten_at' placeholder='When did you eat?'/>
+            <button onClick={this.handleClick}>Submit</button>
+          </div>
         )
     }
 });

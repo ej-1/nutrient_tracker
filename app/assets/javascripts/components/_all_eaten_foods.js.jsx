@@ -31,5 +31,3 @@ var AllEatenFoods = React.createClass({
         )
     }
 });
-
-

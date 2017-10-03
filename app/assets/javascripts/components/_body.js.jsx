@@ -17,9 +17,8 @@ var Body = React.createClass({
     render() {
         return (
             <div>
-
-                <AllEatenFoods eaten_foods={this.state.eaten_foods} />
-                <NewEatenFood handleSubmit={this.handleSubmit}/>
+              <AllEatenFoods eaten_foods={this.state.eaten_foods} />
+              <NewEatenFood handleSubmit={this.handleSubmit}/>
             </div>
         )
     }
