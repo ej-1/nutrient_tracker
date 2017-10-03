@@ -9,6 +9,7 @@ ruby '2.4.1'
 
 gem 'react-rails'
 gem 'webpacker'
+gem 'responders'
 gem 'groupdate'
 gem 'pry'
 gem "therubyracer"
