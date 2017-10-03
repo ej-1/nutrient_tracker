@@ -1,7 +1,8 @@
 var AllEatenFoods = React.createClass({
 
-    handleSubmit(eaten_food) {
-        console.log(eaten_food);
+    handleDelete(id) {
+        console.log('delete eaten food clicked');
+        this.props.handleDelete(id);
     },
 
     render() {
@@ -11,6 +12,9 @@ var AllEatenFoods = React.createClass({
                   <td>{eaten_food.name}</td>
                   <td>{eaten_food.amount}</td>
                   <td>{eaten_food.eaten_at}</td>
+                  <td>
+                    <button onClick={this.handleDelete.bind(this, eaten_food.id)} >Delete</button>
+                  </td>
                 </tr>
             )
         });

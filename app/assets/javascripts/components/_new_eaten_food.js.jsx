@@ -1,9 +1,9 @@
 var NewEatenFood = React.createClass({
 
     handleClick() {
-        var name    	= this.refs.name.value;
-        var amount 		= this.refs.amount.value;
-        var eaten_at 	= this.refs.eaten_at.value;
+        var name      = this.refs.name.value;
+        var amount    = this.refs.amount.value;
+        var eaten_at  = this.refs.eaten_at.value;
         console.log('The name value is ' + name + 'the amount value is ' + amount + 'eaten at' + eaten_at + '.');
         $.ajax({
             url: '/api/v1/eaten_foods',
