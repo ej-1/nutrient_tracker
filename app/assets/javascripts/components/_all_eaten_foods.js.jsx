@@ -5,17 +5,17 @@ var AllEatenFoods = React.createClass({
         this.props.handleDelete(id);
     },
 
+    onUpdate(eaten_food) {
+        this.props.onUpdate(eaten_food);
+    },
+
     render() {
+
         var eaten_foods_body = this.props.eaten_foods.map((eaten_food) => {
             return (
-                <tr>
-                  <td>{eaten_food.name}</td>
-                  <td>{eaten_food.amount}</td>
-                  <td>{eaten_food.eaten_at}</td>
-                  <td>
-                    <button onClick={this.handleDelete.bind(this, eaten_food.id)} >Delete</button>
-                  </td>
-                </tr>
+                <EatenFood eaten_food={eaten_food}
+                      handleDelete={this.handleDelete.bind(this, eaten_food.id)}
+                      handleUpdate={this.onUpdate}/>
             )
         });
 
