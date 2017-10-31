@@ -1,28 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.4.1
 
-Things you may want to cover:
+* Run following commands to import Swedish Food Agency's database into app database.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-1. open rails console
-2. run Foodtype.save_foodtypes_to_database
+1. ´bundle exec rails c´
+2. ´Foodtype.save_foodtypes_to_database
