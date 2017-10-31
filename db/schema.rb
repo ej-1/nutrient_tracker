@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426195402) do
+ActiveRecord::Schema.define(version: 20170426232427) do
+
+  create_table "eaten_foods", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "amount"
+    t.string   "eaten_at",   default: "2017-05-03 16:07:53.417633"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+  end
 
   create_table "foodtypes", force: :cascade do |t|
     t.string   "name"
