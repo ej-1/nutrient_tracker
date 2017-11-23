@@ -6,3 +6,6 @@
 
 1. `bundle exec rails c`
 2. `Foodtype.save_foodtypes_to_database`
+
+Todos:
+- Move logic from EatenFoodsController to lib files.
